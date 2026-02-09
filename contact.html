@@ -342,15 +342,15 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
               <form action="form_contact" method="POST" role="form">
                 
                 <div class="form-group">
-                  <label for="contacts-name">Name <span class="color-red">*</span></label>
+                  <label id="contacts-name">Name <span class="color-red">*</span></label>
                   <input type="text" placeholder="You Name" class="form-control" name="contact_name" required>
                 </div>
                 <div class="form-group">
-                  <label for="contacts-email">Email <span class="color-red">*</span></label>
+                  <label id="contacts-email">Email <span class="color-red">*</span></label>
                   <input type="email" placeholder="youremail@mail.com" class="form-control" name="contact_email" required>
                 </div>
                 <div class="form-group">
-                  <label for="contacts-message">Message <span class="color-red">*</span></label>
+                  <label id="contacts-message">Message <span class="color-red">*</span></label>
                   <textarea class="form-control" placeholder="Your message" rows="5" name="contact_message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary"><i class="icon-ok"></i> Send</button>
@@ -367,34 +367,43 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
                   Burwood<br>
                   Victoria-3125, Australia<br>
               </address>
+
               <address>
-
-
                 <strong>Email</strong><br>
                   <a href="mailto:info@humachlab.com">info@humachlab.com</a><br>
                   <a href="mailto:humachlab@gmail.com">humachlab@gmail.com</a><br>
-                <strong>Skype</strong><br>
 
-              <li><a href="humachlab?userinfo" data-original-title="skype" class="skype"></a></li><a href="humachlab">humachlab</a>
+                <strong>MS Teams</strong><br>
+                  <a href="https://teams.microsoft.com/l/chat/0/0?users=humachlab@outlook.com" target="_blank">humachlab@outlook.com</a><br>
               </address>
+
               <strong>Social Platforms</strong><br>
               <ul class="social-icons margin-bottom-40">
               <li><a href="https://www.facebook.com/humachlab" target="_blank" data-original-title="facebook" class="facebook"></a></li>
-              <li><a href="https://x.com/@humachlab" target="_blank" data-original-title="twitter" class="twitter"></a></li>
-
-
+              <li><a href="https://x.com/@humachlab" target="_blank" data-original-title="x" class="x"></a></li>
               <li><a href="https://www.linkedin.com/company/humachlab" target="_blank" data-original-title="linkedin" class="linkedin"></a></li>
               <li><a href="https://github.com/humachlab" target="_blank" data-original-title="github" class="github"></a></li>
               <li><a href="https://www.youtube.com/@humachlab" target="_blank" data-original-title="youtube" class="youtube"></a></li>
-              <li><a href="humachlab?userinfo" target="_blank" data-original-title="skype" class="skype"></a></li>
+              <li><a href="https://teams.microsoft.com/l/chat/0/0?users=humachlab@outlook.com" target="_blank" data-original-title="msteams" class="msteams"></a></li>
+
+<!--              <li><a href="https://x.com/@humachlab" target="_blank" data-original-title="x" class="x"></a></li>-->
+<!--              <li><a href="https://x.com/@humachlab" target="_blank" data-original-title="x" class="stackoverflow"></a></li>-->
+<!--              <li><a href="https://teams.microsoft.com/l/chat/0/0?users=humachlab@outlook.com" target="_blank" data-original-title="msteams" class="researchgate"></a></li>-->
+<!--              <li><a href="https://x.com/@humachlab" target="_blank" data-original-title="x" class="googlescholar"></a></li>-->
+<!--              <li><a href="https://teams.microsoft.com/l/chat/0/0?users=humachlab@outlook.com" target="_blank" data-original-title="msteams" class="email"></a></li>-->
+<!--              <li><a href="https://x.com/@humachlab" target="_blank" data-original-title="x" class="instagram"></a></li>-->
+<!--              <li><a href="https://teams.microsoft.com/l/chat/0/0?users=humachlab@outlook.com" target="_blank" data-original-title="msteams" class="kaggle"></a></li>-->
+<!--              <li><a href="https://x.com/@humachlab" target="_blank" data-original-title="x" class="orcid"></a></li>-->
+<!--              <li><a href="https://teams.microsoft.com/l/chat/0/0?users=humachlab@outlook.com" target="_blank" data-original-title="msteams" class="phone"></a></li>-->
+<!--              <li><a href="https://x.com/@humachlab" target="_blank" data-original-title="x" class="whatsapp"></a></li>-->
+<!--              <li><a href="https://teams.microsoft.com/l/chat/0/0?users=humachlab@outlook.com" target="_blank" data-original-title="msteams" class="website"></a></li>-->
+<!--              <li><a href="humachlab?userinfo" target="_blank" data-original-title="skype" class="skype"></a></li>-->
+<!--              <li><a href="https://x.com/@humachlab" target="_blank" data-original-title="twitter" class="twitter"></a></li>-->
               </ul>
 
               <h2 class="padding-top-30">About Us</h2>
               <p>
                   HumachLab is a "not for profit" organisation involves in:
-
-
-
               </p>
               <ul class="list-unstyled">
                 <li><i class="fa fa-check"></i> Research </li>
@@ -405,7 +414,9 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
 
             <div class="col-md-12">
               <h2>Map</h2>
-              <div id="map" class="gmaps margin-bottom-40" style="height:400px;"></div>
+              <div id="map" class="gmaps margin-bottom-40" style="height:400px;">
+
+              </div>
             </div>
           </div>
         </div>
@@ -526,7 +537,8 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
           <div class="col-md-4 col-sm-4">
             <ul class="social-footer list-unstyled list-inline pull-right">
               <li><a href="https://www.facebook.com/humachlab" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://x.com/@humachlab" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<!--              <li><a href="https://x.com/@humachlab" target="_blank"><i class="fa fa-twitter"></i></a></li>-->
+              <li><a href="https://x.com/@humachlab" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
 
 
               <li><a href="https://www.linkedin.com/company/humachlab" target="_blank"><i class="fa fa-linkedin"></i></a></li>
