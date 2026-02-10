@@ -266,55 +266,109 @@ var Layout = function () {
         });
     }
 
+    // var handleTheme = function () {
+    //
+    //     var panel = $('.color-panel');
+    //
+    //     // handle theme colors
+    //     var setColor = function (color) {
+    //         // app-1
+    //         // $('#fav-icon').attr("href", "assets/myresources/icons/HML-FavIcon-" + color + ".png?v=" + new Date().getTime());
+    //         // app-2
+    //         // $('#fav-icon').attr("rel", "icon");
+    //         // $('#fav-icon').attr("href", "assets/myresources/icons/HML-FavIcon-" + color + ".png?v=" + new Date().getTime());
+    //         // app-3
+    //         // var favicon = $('#fav-icon');
+    //         // favicon.remove();
+    //         // $('<link id="fav-icon" rel="icon" type="image/png" href="assets/myresources/icons/HML-FavIcon-' + color + '.png?v=' + new Date().getTime() + '">').appendTo('head');
+    //         // app-4
+    //         // $('#fav-icon').remove();
+    //         // $('head').append('<link id="fav-icon" rel="icon" type="image/png" href="assets/myresources/icons/HML-FavIcon-' + color + '.png?v=' + new Date().getTime() + '">');
+    //
+    //
+    //         $('#fav-icon').attr("href", "assets/myresources/icons/HML-FavIcon-" + color + ".png");
+    //         $('#style-color').attr("href", "assets/theme/corporate/css/themes/" + color + ".css");
+    //         // $('.corporate .site-logo img').attr("src", "assets/theme/corporate/img/logos/logo-corp-" + color + ".png");
+    //         // $('.ecommerce .site-logo img').attr("src", "assets/theme/corporate/img/logos/logo-shop-" + color + ".png");
+    //         // $('.corporate .site-logo img').attr("src", "assets/theme/myresources/logos/logo-corp-" + color + ".png");
+    //         // $('.ecommerce .site-logo img').attr("src", "assets/theme/myresources/logos/logo-shop-" + color + ".png");
+    //         $('.corporate .site-logo img').attr("src", "assets/myresources/logos/HML-Logo-" + color + ".png");
+    //         $('.ecommerce .site-logo img').attr("src", "assets/myresources/logos/HML-shop-" + color + ".png");
+    //         // window.location.reload(true);
+    //     }
+    //
+    //     $('.icon-color', panel).click(function () {
+    //         $('.color-mode').show();
+    //         $('.icon-color-close').show();
+    //     });
+    //
+    //     $('.icon-color-close', panel).click(function () {
+    //         $('.color-mode').hide();
+    //         $('.icon-color-close').hide();
+    //     });
+    //
+    //     $('li', panel).click(function () {
+    //         var color = $(this).attr("data-style");
+    //         setColor(color);
+    //         $('.inline li', panel).removeClass("current");
+    //         $(this).addClass("current");
+    //     });
+    // }
+
+
     var handleTheme = function () {
-    
-        var panel = $('.color-panel');
-    
-        // handle theme colors
+
+        $('body')
+          .off('click.layoutTheme', '.color-panel .icon-color')
+          .on('click.layoutTheme', '.color-panel .icon-color', function () {
+              $('.color-mode').show();
+              $('.icon-color-close').show();
+          });
+
+        $('body')
+          .off('click.layoutThemeClose', '.color-panel .icon-color-close')
+          .on('click.layoutThemeClose', '.color-panel .icon-color-close', function () {
+              $('.color-mode').hide();
+              $('.icon-color-close').hide();
+          });
+
         var setColor = function (color) {
-            // app-1
-            // $('#fav-icon').attr("href", "assets/myresources/icons/HML-FavIcon-" + color + ".png?v=" + new Date().getTime());
-            // app-2
-            // $('#fav-icon').attr("rel", "icon");
-            // $('#fav-icon').attr("href", "assets/myresources/icons/HML-FavIcon-" + color + ".png?v=" + new Date().getTime());
-            // app-3
-            // var favicon = $('#fav-icon');
-            // favicon.remove();
-            // $('<link id="fav-icon" rel="icon" type="image/png" href="assets/myresources/icons/HML-FavIcon-' + color + '.png?v=' + new Date().getTime() + '">').appendTo('head');
-            // app-4
-            // $('#fav-icon').remove();
-            // $('head').append('<link id="fav-icon" rel="icon" type="image/png" href="assets/myresources/icons/HML-FavIcon-' + color + '.png?v=' + new Date().getTime() + '">');
+
+            if (!$('#style-color').length) {
+                $('head').append('<link id="style-color" rel="stylesheet" href="">');
+            }
+
+            if (!$('#fav-icon').length) {
+                $('head').append('<link id="fav-icon" rel="icon" type="image/png" href="">');
+            }
+
+            $('#fav-icon').attr("href",
+                "assets/myresources/icons/HML-FavIcon-" + color + ".png"
+            );
+
+            $('#style-color').attr("href",
+                "assets/theme/corporate/css/themes/" + color + ".css"
+            );
+
+            $('.corporate .site-logo img')
+                .attr("src", "assets/myresources/logos/HML-Logo-" + color + ".png");
+
+            $('.ecommerce .site-logo img')
+                .attr("src", "assets/myresources/logos/HML-shop-" + color + ".png");
+        };
+
+        $('body')
+          .off('click.layoutThemeColor', '.color-panel li[data-style]')
+          .on('click.layoutThemeColor', '.color-panel li[data-style]', function () {
+              var color = $(this).attr("data-style");
+              setColor(color);
+
+              $('.color-panel .inline li').removeClass("current");
+              $(this).addClass("current");
+          });
+    };
 
 
-            $('#fav-icon').attr("href", "assets/myresources/icons/HML-FavIcon-" + color + ".png");
-            $('#style-color').attr("href", "assets/theme/corporate/css/themes/" + color + ".css");
-            // $('.corporate .site-logo img').attr("src", "assets/theme/corporate/img/logos/logo-corp-" + color + ".png");
-            // $('.ecommerce .site-logo img').attr("src", "assets/theme/corporate/img/logos/logo-shop-" + color + ".png");
-            // $('.corporate .site-logo img').attr("src", "assets/theme/myresources/logos/logo-corp-" + color + ".png");
-            // $('.ecommerce .site-logo img').attr("src", "assets/theme/myresources/logos/logo-shop-" + color + ".png");
-            $('.corporate .site-logo img').attr("src", "assets/myresources/logos/HML-Logo-" + color + ".png");
-            $('.ecommerce .site-logo img').attr("src", "assets/myresources/logos/HML-shop-" + color + ".png");
-            // window.location.reload(true);
-        }
-
-        $('.icon-color', panel).click(function () {
-            $('.color-mode').show();
-            $('.icon-color-close').show();
-        });
-
-        $('.icon-color-close', panel).click(function () {
-            $('.color-mode').hide();
-            $('.icon-color-close').hide();
-        });
-
-        $('li', panel).click(function () {
-            var color = $(this).attr("data-style");
-            setColor(color);
-            $('.inline li', panel).removeClass("current");
-            $(this).addClass("current");
-        });
-    }
-	
     return {
         init: function () {
             // init core variables

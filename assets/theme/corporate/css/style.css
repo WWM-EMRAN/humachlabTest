@@ -501,6 +501,7 @@ body.page-header-fixed {
 	padding: 0;
 	float: left;
 	text-transform: uppercase;
+	font-weight: 600;
 	/*line-height: 35px; !* Center the navigation links *!*/
 }
 .header-navigation ul {
