@@ -1,1 +1,48 @@
-/* here you can put your own css to customize and override the theme */
+/*!* here you can put your own css to customize and override the theme *!*/
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background-color: white; /* Dark background from design */
+  display: flex;
+  justify-content: center; /* Horizontally center logo and dots */
+  align-items: center;     /* Vertically center logo and dots */
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;               /* Space between logo and animation dots */
+}
+
+#preloadLogo {
+  width: 150px;            /* Standardized preloader logo width */
+  display: block;
+}
+
+/* Triple-dot bouncing animation */
+.dot-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot-loader span {
+  width: 12px;
+  height: 12px;
+  background-color: red; /* Defined in :root */
+  border-radius: 50%;
+  margin: 0 5px;
+  display: inline-block;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.dot-loader span:nth-child(2) { animation-delay: 0.2s; }
+.dot-loader span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
