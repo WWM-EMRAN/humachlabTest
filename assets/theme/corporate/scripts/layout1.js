@@ -362,9 +362,6 @@ var Layout = function () {
             // normalize
             var c = (!color || color === "default") ? "red" : color;
 
-            // ✅ persist theme
-            try { localStorage.setItem("hml_theme", c); } catch(e) {}
-
             // ensure links exist (your existing logic)
             if (!$('#style-color').length) {
                 $('head').append('<link id="style-color" rel="stylesheet" href="">');
@@ -372,6 +369,9 @@ var Layout = function () {
             if (!$('#fav-icon').length) {
                 $('head').append('<link id="fav-icon" rel="icon" type="image/png" href="">');
             }
+
+            // ✅ persist theme
+            try { localStorage.setItem("hml_theme", c); } catch (e) {}
 
             // favicon
             $('#fav-icon').attr("href",
@@ -390,25 +390,6 @@ var Layout = function () {
             $('.ecommerce .site-logo img')
                 .attr("src", "assets/myresources/logos/HML-shop-" + c + ".png");
         };
-
-
-        var restoreTheme = function () {
-            var saved = "red";
-            try { saved = localStorage.getItem("hml_theme") || "red"; } catch(e) {}
-
-            setColor(saved);
-
-            // also mark current palette item if present
-            $('.color-panel .inline li').removeClass("current");
-            $('.color-panel li[data-style="' + saved + '"]').addClass("current");
-        };
-
-        // 1) apply immediately (works if header/menu already on page)
-        restoreTheme();
-
-        // 2) apply after your include.js injects header/menu/theme panel
-        window.addEventListener("components:ready", restoreTheme);
-
 
 
 

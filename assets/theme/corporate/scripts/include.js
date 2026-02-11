@@ -71,3 +71,6 @@ async function loadIncludes() {
 window.Preload?.hidePreloader?.();
 
 document.addEventListener("DOMContentLoaded", loadIncludes);
+
+window.dispatchEvent(new Event("components:ready"));
+
