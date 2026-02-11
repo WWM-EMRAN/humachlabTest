@@ -22,17 +22,20 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
 <!-- >load static files directory/folder: image-jpg|png|ico, css, js -->
 <!-- Head BEGIN -->
 <head>
-    <title> HumachLab - Home </title>
-
     <!-- favicon START -->
     <link rel="icon" type="image/png" href="assets/myresources/icons/HML-FavIcon-red.png" id="fav-icon">
     <!-- favicon END -->
 
+    <!-- common metadata, style sheets and fonts -->
+    <div data-include="components/head.html"></div>
+
+    <!-- title START -->
+    <title> HumachLab - Home </title>
+    <!-- title END -->
+
     <!-- Theme styles START -->
     <link href="assets/theme/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
     <!-- Theme styles END -->
-
-    <div data-include="components/head.html"></div>
 </head>
 <!-- Head END -->
 
@@ -41,32 +44,10 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
 <body class="corporate">
 
 
-<!-- preload: show loading animation before the page content loaded -->
+
+
+<!-- preload: preloader animation when the site is loading -->
 <!-- >load static files directory/folder: image-jpg|png|ico, css, js -->
-<!--<div id="preloader-logo" aria-hidden="true">-->
-<!--  <div class="preloader-wrap">-->
-<!--    &lt;!&ndash; Gray base &ndash;&gt;-->
-<!--    <img class="logo gray" src="assets/myresources/icons/HML-FavIcon-red.png" alt="HumachLab Logo" />-->
-
-<!--    &lt;!&ndash; Color wipe layer &ndash;&gt;-->
-<!--    <div class="wipe">-->
-<!--      <img class="logo color" src="assets/myresources/icons/HML-FavIcon-red.png" alt="" />-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!--<div class="preload-logo">-->
-<!--  <img class="logo-gray"  src="assets/myresources/icons/HML-FavIcon-red.png" alt="logo">-->
-<!--  <img class="logo-color" src="assets/myresources/icons/HML-FavIcon-red.png" alt="logo">-->
-<!--</div>-->
-
-<!--<div id="preloader">-->
-<!--  <div class="preload-logo">-->
-<!--    <div class="logo-gray"></div>-->
-<!--    <div class="logo-color"></div>-->
-<!--  </div>-->
-<!--</div>-->
-
 <div id="preloader">
     <div class="preloader-content">
         <img src="assets/myresources/icons/HML-FavIcon-red.png" alt="HumachLab Logo" id="preloadLogo">
@@ -75,8 +56,6 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
         </div>
     </div>
 </div>
-
-
 
 
 
@@ -108,7 +87,6 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
 
 
         <!-- content: main content of the page -->
-
 
         <!-- BEGIN SERVICE BOX -->
         <div class="row service-box margin-bottom-40">
@@ -477,7 +455,6 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
         </div>
         <!-- END CLIENTS -->
 
-
     </div>
 </div>
 
@@ -499,7 +476,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
 <div data-include="components/all_scripts_bottom.html"></div>
 <!-- END PAGE LEVEL JAVASCRIPTS -->
 
-<!--<script src="assets/js/hml_static_runtime.js"></script>-->
+<!--<script src="assets/theme/corporate/scripts/hml_static_runtime.js"></script>-->
 <script src="assets/theme/corporate/scripts/preload.js"></script>
 <script src="assets/theme/corporate/scripts/include.js"></script>
 
