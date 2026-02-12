@@ -1,5 +1,9 @@
 /*!* here you can put your own css to customize and override the theme *!*/
 
+:root {
+  --theme-color: black; /* default red */
+}
+
 
 /*###################################*/
 /*Preloader CSS*/
@@ -35,7 +39,7 @@
 .dot-loader span {
   width: 12px;
   height: 12px;
-  background-color: red; /* Defined in :root */
+  background-color: var(--theme-color); /* Defined in :root */
   border-radius: 50%;
   margin: 0 5px;
   display: inline-block;

@@ -5,7 +5,7 @@ const UI = {
 
     // Optional delay so user sees it briefly
     setTimeout(() => {
-      preloader.style.transition = "opacity 0.6s ease";
+      preloader.style.transition = "opacity 06s ease";
       preloader.style.opacity = "0";
       setTimeout(() => {
         preloader.style.display = "none";

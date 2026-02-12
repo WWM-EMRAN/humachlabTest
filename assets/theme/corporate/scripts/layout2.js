@@ -373,18 +373,8 @@ var Layout = function () {
                 $('head').append('<link id="fav-icon" rel="icon" type="image/png" href="">');
             }
 
-            if (c) {
-                document.documentElement.style.setProperty(
-                    "--theme-color", c
-                );
-            }
-
             // favicon
             $('#fav-icon').attr("href",
-                "assets/myresources/icons/HML-FavIcon-" + c + ".png"
-            );
-
-            $('#preloadLogo').attr("src",
                 "assets/myresources/icons/HML-FavIcon-" + c + ".png"
             );
 
@@ -399,7 +389,6 @@ var Layout = function () {
 
             $('.ecommerce .site-logo img')
                 .attr("src", "assets/myresources/logos/HML-shop-" + c + ".png");
-
         };
 
 
