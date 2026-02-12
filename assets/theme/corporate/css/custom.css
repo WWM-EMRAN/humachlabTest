@@ -98,3 +98,62 @@
 }
 
 
+
+/*###################################*/
+/*What we do CSS*/
+/* HumachLab - What We Do (Metronic Steps) */
+/* Equal height for What We Do section */
+.hml-whatwedo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hml-whatwedo .front-step-col {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.hml-whatwedo .front-step {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* Push buttons to bottom */
+.hml-whatwedo .hml-step-links {
+  margin-top: auto;
+}
+
+
+/*.hml-whatwedo .front-step {*/
+/*  position: relative;*/
+/*  padding-top: 26px; !* room for icon *!*/
+/*}*/
+
+.hml-whatwedo .hml-step-icon {
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+/*.hml-whatwedo .hml-step-links {*/
+/*  margin-top: 14px;*/
+/*}*/
+
+.hml-whatwedo .hml-mini-links {
+  margin-top: 10px;
+  /*font-size: 12px;*/
+  opacity: 0.9;
+}
+
+.hml-whatwedo .hml-mini-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.hml-whatwedo .hml-mini-links a:hover {
+  text-decoration: underline;
+}
+
+
