@@ -50,6 +50,11 @@ async function loadIncludes() {
     window.initThemeCustomizer();
   }
 
+  if (window.initImpactCounters) {
+    window.initImpactCounters();
+  }
+
+
   // If Layout is used, initialize it and THEN signal "ready"
   if (window.Layout && window.jQuery) {
     jQuery(function () {

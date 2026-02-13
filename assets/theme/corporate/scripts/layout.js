@@ -285,7 +285,6 @@ var Layout = function () {
     //         // $('#fav-icon').remove();
     //         // $('head').append('<link id="fav-icon" rel="icon" type="image/png" href="assets/myresources/icons/HML-FavIcon-' + color + '.png?v=' + new Date().getTime() + '">');
     //
-    //
     //         $('#fav-icon').attr("href", "assets/myresources/icons/HML-FavIcon-" + color + ".png");
     //         $('#style-color').attr("href", "assets/theme/corporate/css/themes/" + color + ".css");
     //         // $('.corporate .site-logo img').attr("src", "assets/theme/corporate/img/logos/logo-corp-" + color + ".png");
