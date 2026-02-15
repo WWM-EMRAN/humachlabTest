@@ -1,18 +1,19 @@
 :root {
   /* ===========================
-     HumachLab / Metronic Theme Tokens (BLACK)
+     HumachLab / Metronic Theme Tokens (WHITE-SILVER)
      - Keep aliases for backward-compatibility
      - Use --theme-primary for new custom components
      =========================== */
 
-  /* Primary theme color (BLACK) */
-  --theme-primary: #1A1A1A;
-  --theme-primary-light: #4D4D4D;
-  --theme-primary-lighter: #808080;
+  /* Primary theme color (WHITE-SILVER) */
+  --theme-primary: #E0E0E0;
+  --theme-primary-light: #EEEEEE;
+  --theme-primary-lighter: #F5F5F5;
   --theme-on-primary: #FFFFFF;
+  /*--theme-on-primary: #000000;*/
 
   /* Shadow token */
-  --theme-shadow: rgba(0, 0, 0, 0.15);
+  --theme-shadow: rgba(0, 0, 0, 0.10);
 
   /* Backward-compatible tokens used in existing theme/custom CSS */
   --theme-color: var(--theme-primary);
@@ -269,7 +270,7 @@ a:hover {
 }
 .pricing-active {
   border: 3px solid var(--red-main);
-  box-shadow: 7px 7px var(--theme-shadow);
+  box-shadow: 7px 7px var(--red-shadow);
 }
 .pricing:hover {
   border: 3px solid var(--red-main);
