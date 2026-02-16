@@ -3384,6 +3384,9 @@ Styler Panel
 .color-mode li.color-white {
   background: var(--c122);
 }
+.color-mode li.color-silver {
+  background: var(--c122);
+}
 .color-gray {
 	background: var(--c056);
 }

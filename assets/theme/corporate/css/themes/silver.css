@@ -6,12 +6,9 @@
      =========================== */
 
   /* Primary theme color (WHITE-SILVER) */
-  /*--theme-primary: #E0E0E0;*/
-  /*--theme-primary-light: #EEEEEE;*/
-  /*--theme-primary-lighter: #F5F5F5;*/
-    --theme-primary: #888888;
-    --theme-primary-light: #AAAAAA;
-    --theme-primary-lighter: #CCCCCC;
+  --theme-primary: #E0E0E0;
+  --theme-primary-light: #EEEEEE;
+  --theme-primary-lighter: #F5F5F5;
   /*--theme-on-primary: #FFFFFF;*/
   /*--theme-on-primary: #000000;*/
   --theme-on-primary: #333333;
