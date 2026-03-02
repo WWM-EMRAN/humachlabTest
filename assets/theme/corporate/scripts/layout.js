@@ -371,10 +371,32 @@ var Layout = function () {
                 $('head').append('<link id="style-color" rel="stylesheet" href="">');
                 console.log('1 ====> theme color set to style file', c);
             }
+            // fav icon
             if (!$('#fav-icon').length) {
-                $('head').append('<link id="fav-icon" rel="icon" type="image/png" href="">');
+                $('head').append('<link id="fav-icon" rel="icon" type="image/x-icon" href="">');
                 console.log('2 ====> theme fav icon set', c);
             }
+            if (!$('#fav-shicon').length) {
+                $('head').append('<link id="fav-shicon" rel="icon" type="image/x-icon" href="">');
+                console.log('2 ====> theme fav icon set', c);
+            }
+            if (!$('#fav-apple').length) {
+                $('head').append('<link id="fav-apple" rel="icon" type="image/x-icon" href="">');
+                console.log('2 ====> theme fav icon set', c);
+            }
+            // ////////////////////
+            // if (!$('#fav-icon').length) {
+            //     $('head').append('<link id="fav-icon" rel="icon" type="image/png" href="">');
+            //     console.log('2 ====> theme fav icon set', c);
+            // }
+            // if (!$('#fav-shicon').length) {
+            //     $('head').append('<link id="fav-shicon" rel="icon" type="image/png" href="">');
+            //     console.log('2 ====> theme fav icon set', c);
+            // }
+            // if (!$('#fav-apple').length) {
+            //     $('head').append('<link id="fav-apple" rel="icon" type="image/png" href="">');
+            //     console.log('2 ====> theme fav icon set', c);
+            // }
 
             if (c) {
                 document.documentElement.style.setProperty(
@@ -384,8 +406,24 @@ var Layout = function () {
 
             // favicon
             $('#fav-icon').attr("href",
-                "assets/myresources/icons/HML-FavIcon-" + c + ".png"
+                "assets/myresources/icons/HML-FavIcon-" + c + ".ico"
             );
+            $('#fav-shicon').attr("href",
+                "assets/myresources/icons/HML-FavIcon-" + c + ".ico"
+            );
+            $('#fav-apple').attr("href",
+                "assets/myresources/icons/HML-FavIcon-" + c + ".ico"
+            );
+            // ////////////////////////////
+            // $('#fav-icon').attr("href",
+            //     "assets/myresources/icons/HML-FavIcon-" + c + ".png"
+            // );
+            // $('#fav-shicon').attr("href",
+            //     "assets/myresources/icons/HML-FavIcon-" + c + ".png"
+            // );
+            // $('#fav-apple').attr("href",
+            //     "assets/myresources/icons/HML-FavIcon-" + c + ".png"
+            // );
             console.log('3 ====> theme fav icon set', c);
 
             $('#preloadLogo').attr("src",
