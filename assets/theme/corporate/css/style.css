@@ -3829,15 +3829,15 @@ Styler Panel
 }
 
 /* Service Box Styling */
-.hml-service-box {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 30px;
-    height: 100%;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-    position: relative;
-}
+/*.hml-service-box {*/
+/*    background: #fff;*/
+/*    border: 1px solid #eee;*/
+/*    padding: 30px;*/
+/*    height: 100%;*/
+/*    transition: all 0.3s ease;*/
+/*    border-radius: 4px;*/
+/*    position: relative;*/
+/*}*/
 
 .hml-service-box:hover {
     border-color: var(--theme-primary);
@@ -3868,3 +3868,34 @@ Styler Panel
     margin-right: 5px;
 }
 
+/* 1. Force the row to behave as a Flex Container */
+.hml-service-section.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 2. Remove floats and force columns to stretch to the tallest height */
+.hml-service-section.row > [class*="col-"] {
+    display: flex;
+    float: none; /* Kills the float that causes the 'snagging' */
+}
+
+/* 3. Modify your existing .hml-service-box to work inside the flex column */
+.hml-service-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensures it fills the column width */
+    /* Your existing styles below */
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* 4. Align the bullet points to the bottom for a clean look */
+.hml-service-box ul {
+    margin-top: auto;
+    padding-top: 15px;
+}
